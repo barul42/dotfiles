@@ -96,8 +96,8 @@ bindsym $mod+q focus parent
 
 # switch to workspace
 bindsym $mod+ampersand workspace 1 irc
-bindsym $mod+eacute workspace number 2 www
-bindsym $mod+quotedbl workspace number 3 sys
+bindsym $mod+eacute workspace 2 www
+bindsym $mod+quotedbl workspace 3 sys
 bindsym $mod+apostrophe workspace 4 ssh
 bindsym $mod+parenleft workspace 5 misc
 bindsym $mod+minus workspace 6
@@ -107,7 +107,7 @@ bindsym $mod+ccedilla workspace 9
 bindsym $mod+agrave workspace 10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1 irc 
+bindsym $mod+Shift+1 move container to workspace 1 irc
 bindsym $mod+Shift+eacute move container to workspace 2 www
 bindsym $mod+Shift+3 move container to workspace 3 sys
 bindsym $mod+Shift+4 move container to workspace 4 ssh
@@ -167,6 +167,11 @@ bar {
 
 			separator #666666
 		}
+		# disable mousewheel on bar
+		bindsym button4 nop
+		bindsym button5 nop
+		# remove workspaces numbers
+		strip_workspace_numbers yes
 }
 
 #bindsym $mod+Delete exec alock -bg image:file=/home/barul/pics/misc/lockscreen.png -auth pam
@@ -178,10 +183,16 @@ bindsym $mod+Print exec scrot -s '%Y-%m-%d_%k%M%S.png' -e 'mv $f ~/pics/shots/'
 bindsym $mod+Shift+s exec scrot -s
 
 
-## SOUND
+## MULTIMEDIA
 bindsym XF86AudioMute exec amixer -c 0 set Master toggle
 bindsym XF86AudioRaiseVolume exec amixer -q sset Master 5%+
 bindsym XF86AudioLowerVolume exec amixer -q sset Master 5%- 
+
+bindsym XF86AudioPlay exec cmus-remote -u
+bindsym XF86AudioStop exec cmus-remote -s 
+bindsym XF86AudioPrev exec cmus-remote -r
+bindsym XF86AudioNext exec cmus-remote -n
+
 
 for_window [class="^.*"] border pixel 1
 
