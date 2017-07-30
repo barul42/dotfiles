@@ -1,0 +1,21 @@
+// barul
+
+*	{
+	foreground:		#ffffff;
+	background:		#000000;
+}
+
+#window	{
+	location:		center;
+	anchor:			north;
+}
+
+#window box	{
+	border:			1px;
+	padding:		3px;
+}
+
+#window mainbox listview element selected {
+	foreground:		#000000;
+	background:		#ffffff;
+}
