@@ -29,33 +29,8 @@ function spundrscr() {
 for f in *\ *; do mv "$f" "${f// /_}"; done
 }
 
-function mpvr() {
-if [[ -z "$1" ]];
-then
-	mpv -vo vdpau $(find . -name '*.mp4' -o -name '*.mkv' -o -name '*.wmv' -o -name '*.avi' | sort -R);
-else
-	mpv -vo vdpau $(find $1 -name '*.mp4' -o -name '*.mkv' -o -name '*.wmv' -o -name '*.avi' | sort -R);
-
-fi
-}
-
 function pi(){
 echo "scale=$1; 4*a(1)"| bc -l
-}
-
-function whatdidiupgrade(){
-	if [[ $1 == "today" ]];
-	then
-		grep $(date +%Y-%m-%d) /var/log/pacman.log | grep upgraded;
-	elif [[ $1 == "yesterday" ]];
-	then
-		grep $(date --date="1 days ago" +%Y-%m-%d) /var/log/pacman.log | grep upgraded;
-	elif [[ $1 == "recently" ]];
-	then
-		grep $(date --date="7 days ago" +%Y-%m-%d) /var/log/pacman.log | grep upgraded;
-	else
-		grep upgraded /var/log/pacman.log;
-	fi
 }
 
 function sub() {
@@ -71,9 +46,5 @@ function wgetl() {
 function zz() {
 	f=$1
 	unzip $f -d ${f%.*}
-}
-
-function convert_to_flac() {
-	 for i in $(ls |grep ".$1"); do ffmpeg -i $i -f flac ${i%.$1}.flac; done
-	 rm *.$1
+	rm $1
 }
