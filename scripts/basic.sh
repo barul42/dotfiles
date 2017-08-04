@@ -9,4 +9,5 @@ ln -sf ~/git/dotfiles/bash/functions.sh ~/.bash/functions.sh
 ln -sf ~/git/dotfiles/vim/vimrc ~/.vimrc
 ln -sf ~/git/dotfiles/vim/colors ~/.vim/colors
 ln -sf ~/git/dotfiles/Xresources ~/.Xresources
+ln -sf ~/git/dotfiles/xinitrc ~/.xinitrc
 source ~/.bashrc
