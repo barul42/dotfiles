@@ -1,2 +1,2 @@
-setxkbmap fr oss
+xrdb -load ~/.Xresources
 i3
