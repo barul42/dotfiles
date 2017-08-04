@@ -6,8 +6,8 @@ set number
 
 "" colorscheme
 set background=dark
-colorscheme hybrid
-
+"colorscheme hybrid
+colorscheme jellybeans
 "" encoding
 set enc=utf-8
 set fileencodings=utf-8
@@ -27,8 +27,10 @@ set ignorecase " Make searches case-insensitive.
 
 "" new 'syn on'
 syntax enable
-" lighttpd config
+
+"" lighttpd config
 au BufRead,BufNewFile /etc/lighttpd/*.conf,lighttpd.conf set filetype=lighttpd
+"" nginx config
 au BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/* if &ft == '' | setfiletype nginx | endif
 
 "" indent
