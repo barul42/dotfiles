@@ -1,11 +1,8 @@
 #!/bin/bash
-mkdir ~/git
-cd ~/git
+mkdir ~/git && cd ~/git
 git clone https://github.com/barul42/dotfiles
-mkdir ~/.bash/
-mkdir ~/.vim/
-mkdir -p ~/.config/i3
-mkdir ~/.config/i3status
+mkdir ~/.bash/ ~/.vim/
+mkdir -p ~/.config/{i3,i3status}
 ln -sf ~/git/dotfiles/bash/bashrc ~/.bashrc
 ln -sf ~/git/dotfiles/bash/functions.sh ~/.bash/functions.sh
 ln -sf ~/git/dotfiles/vim/vimrc ~/.vimrc
