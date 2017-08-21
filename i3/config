@@ -176,7 +176,7 @@ bar {
 }
 
 #bindsym $mod+Delete exec alock -bg image:file=/home/barul/pics/misc/lockscreen.png -auth pam
-bindsym $mod+Delete exec i3lock -i /home/barul/pics/misc/lockscreen.png
+bindsym $mod+Delete exec i3lock -c 000000
 
 bindsym Print exec scrot '%Y-%m-%d_%k%M%S.png' -e 'mv $f ~/pics/shots/'
 bindsym $mod+Print exec scrot -s '%Y-%m-%d_%k%M%S.png' -e 'mv $f ~/pics/shots/'
