@@ -1,8 +1,10 @@
 URxvt.background:		black
 URxvt.foreground:		white
 URxvt.scrollBar:		false
-URxvt.font:				xft:DejaVu Sans Mono:antialias=true:size=11
-URxvt.boldFont:			xft:DejaVu Sans Mono:antialias=true:size=11
+URxvt.font:				xft:Fantasque Sans Mono:antialias=true:size=12
+URxvt.boldFont:			xft:Fantasque Sans Mono:antialias=true:size=12
+!URxvt.font:				xft:DejaVu Sans Mono:antialias=true:size=11
+!URxvt.boldFont:			xft:DejaVu Sans Mono:antialias=true:size=11
 URxvt.perl-ext-common:	default,matcher
 URxvt.url-launcher:		/usr/bin/firefox
 URxvt.matcher.button:	1
