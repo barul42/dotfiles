@@ -1,7 +1,7 @@
 ## FUNCTIONS
 
 function genp() {
-	tr -dc [:alnum:][:punct:] < /dev/urandom | head -c ${1:-10} | xargs -0
+	tr -dc [:graph:] < /dev/urandom | head -c ${1:-10} | xargs -0
 }
 
 function dumphttplinks() {
